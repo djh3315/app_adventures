@@ -2,7 +2,7 @@ require "bundler/capistrano"
 
 server "104.131.207.175", :web, :app, :db, primary: true
 
-set :application, "app-adventures"
+set :application, "app_adventures"
 set :user, "deployer"
 set :deploy_to, "/home/#{user}/apps/#{application}"
 set :deploy_via, :remote_cache
