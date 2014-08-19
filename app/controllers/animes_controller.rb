@@ -6,10 +6,11 @@ class AnimesController < ApplicationController
     req.add_field('user', 'djh3315')
     req.add_field('password', 'apitest')
     req.add_field('user-agent', 'api-indiv-BDF02918341A555C9108D3AC352A2432')
+    @query = req.inspect
     res = Net::HTTP.start(url.host, url.port) { |http|
       http.request(req)
     }
-    @query = res.inspect
+    @response = res.inspect
   end
   def create
     # User Agent - api-indiv-BDF02918341A555C9108D3AC352A2432
