@@ -7,6 +7,7 @@ class AnimesController < ApplicationController
     res = Net::HTTP.start(url.host, url.port) { |http|
       http.request(req)
     }
+    @query = res.inspect
   end
   def create
     # User Agent - api-indiv-BDF02918341A555C9108D3AC352A2432
