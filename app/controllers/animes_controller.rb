@@ -2,7 +2,8 @@ require 'net/http'
 require 'rest_client'
 class AnimesController < ApplicationController
   def index
-    res = RestClient.get 'http://myanimelist.net/api/account/verify_credentials.xml', {:user-agent => 'api-indiv-BDF02918341A555C9108D3AC352A2432', :user => 'djh3315', :password => 'apitest'}
+    res = RestClient.get 'http://myanimelist.net/api/anime/search.xml?q=bleach', {:user-agent => 'api-indiv-BDF02918341A555C9108D3AC352A2432'}
+    # res = RestClient.get 'http://myanimelist.net/api/account/verify_credentials.xml', {:user-agent => 'api-indiv-BDF02918341A555C9108D3AC352A2432', :user => 'djh3315', :password => 'apitest'}
     # url = URI.parse()
     # req = Net::HTTP::Get.new(url)
     # req.add_field('user', 'djh3315')
