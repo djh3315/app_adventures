@@ -1,5 +1,5 @@
 require 'net/http'
-require 'rest_client'
+
 class AnimesController < ApplicationController
   def index
     res = RestClient.get 'http://myanimelist.net/api/anime/search.xml?q=bleach', {:user-agent => 'api-indiv-BDF02918341A555C9108D3AC352A2432'}
