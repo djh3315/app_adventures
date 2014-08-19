@@ -1,4 +1,5 @@
 require 'net/http'
+require 'rest_client'
 
 class AnimesController < ApplicationController
   def index
