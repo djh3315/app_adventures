@@ -17,6 +17,6 @@ class AnimesController < ApplicationController
     res = Net::HTTP.start(url.host, url.port) { |http|
       http.request(req)
     }
-    render :xml => req.body
+    render req.success?
   end
 end
